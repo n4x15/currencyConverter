@@ -1,12 +1,11 @@
 import React from "react";
 
-
-const MySelect = (props) => {
+const RateSelect = (props) => {
   return (
     <div>
       <select value={props.value} onChange={(event) => props.currency(event.target.value)} >
-        {Object.keys(props.a).map((key) => (
-          <option key={key} value={props.a[key]}>
+        {Object.keys(props.currencies).map((key) => (
+          <option key={key} value={props.currencies[key]}>
             {key}
           </option>
         ))}
@@ -15,4 +14,4 @@ const MySelect = (props) => {
   );
 };
 
-export default MySelect;
+export default RateSelect;
